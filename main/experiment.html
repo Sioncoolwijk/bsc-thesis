@@ -41,7 +41,7 @@
         
             <p>Bedankt voor uw deelname en succes met de opdracht!</p>
 
-            <button onclick="goToPage('page2')">Ik heb alle informatie zorgvuldig doorgelezen en wil door.</button>
+            <button onclick="goToPage('page2')">Ik heb alle informatie zorgvuldig gelezen en wil door.</button>
         </div>
         </section>
 
@@ -63,7 +63,7 @@
                 <div class="container">
                 <div class="naastElkaar">
                 <div class="subheading"> Klik mij voor een demonstratie!</div>
-                <button id="exampleButton" onclick="gptGenerate()" style="font-size:25px; margin:1em;"> 
+                <button id="exampleButton" onclick="gptGenerate('givenText', 'textInput', 'exampleButton')" style="font-size:25px; margin:1em;"> 
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </button>
                 </div>
@@ -71,11 +71,11 @@
 
                 <div class="subheading">Output</div>
                 <div class="input-control">
-                    <textarea id="textInput" style="resize: none;" onkeydown="checkWordLen(this)" placeholder="Zelf tikken of genereren..."></textarea>
+                    <textarea id="textInput" name="textInput" style="resize: none;" placeholder="Zelf tikken of genereren..."></textarea>
                     <p>Aantal woorden: <span id="wordCount">0</span></p>
                 </div> 
 
-                <button onclick="goToPage('page3')">Ik heb de demonstratie doorgelopen en wil door naar de opdracht.</button>
+                <button onclick="goToPage('page3')">Ik heb de demonstratie doorlopen en wil door naar de opdracht.</button>
             </div>
         
         </section>
@@ -88,15 +88,15 @@
                 <p>De opdracht mag nu worden voltooid. Nogmaals: Let op dat u het GPT model <strong>niet</strong> gebruikt, anders maakt u geen kans op een cadeaukaart van bol.com ter waarde van 20 euro.</p>
 
                 <div class="subheading">Input</div>
-                <blockquote id="givenText">Tekst: Lorem Ipsum</blockquote>
+                <blockquote id="givenText2">Tekst: Lorem Ipsum</blockquote>
 
                 <div class="subheading">Instructies</div>
-                <blockquote id='prompt'>Vat het verhaal samen in <strong>exact</strong> 100 woorden.</blockquote>
+                <blockquote id='prompt2'>Vat het verhaal samen in <strong>exact</strong> 100 woorden.</blockquote>
 
                 <div class="container">
                 <div class="naastElkaar">
                 <div class="subheading"> Indien je het model toch wil gebruiken: </div>
-                <button id="exampleButton" onclick="gptGenerate()" style="font-size:25px; margin:1em;"> 
+                <button id="exampleButton2" onclick="gptGenerate('givenText2', 'textInput2', 'exampleButton2')" style="font-size:25px; margin:1em;"> 
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </button>
                 </div>
@@ -104,8 +104,8 @@
 
                 <div class="subheading">Output</div>
                 <div class="input-control">
-                    <textarea id="textInput" style="resize: none;" onkeydown="checkWordLen(this)" placeholder="Typ hier uw uitwerking..."></textarea>
-                    <p>Aantal woorden: <span id="wordCount">0</span></p>
+                    <textarea id="textInput2" name="textInput2" style="resize: none;" placeholder="Typ hier uw uitwerking..."></textarea>
+                    <p>Aantal woorden: <span id="wordCount2">0</span></p>
                 </div> 
 
                 <button style="background-color:grey" onclick="goToPage('page2')">Ga terug</button>
@@ -122,6 +122,7 @@
 
         <script src="js/button.js"></script>
         <script src="js/wordCount.js"></script>
+        <script src="js/wordCount2.js"></script>
         <script src="js/generation.js"></script>
         <script src="js/wordMax.js"></script>
 
