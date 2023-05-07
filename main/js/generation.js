@@ -1,4 +1,4 @@
-function gptGenerate(givenTextId, textAreaId, exampleButtonId) {
+function gptGenerate(givenTextId, textAreaId, exampleButtonId, words) {
 
     const givenText = document.getElementById(givenTextId);
     const outputText = document.getElementById(textAreaId);    
@@ -10,7 +10,8 @@ function gptGenerate(givenTextId, textAreaId, exampleButtonId) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            message: givenText.innerText
+            message: givenText.innerText,
+            words: words
         })
     })
     .then(res => res.json())
@@ -25,6 +26,7 @@ function gptGenerate(givenTextId, textAreaId, exampleButtonId) {
                 currentIndex++;
                 setTimeout(typeCharacter, 10); // Adjust the delay (in milliseconds) to control the typing speed
                 countWords();
+                countWords2();
             }
         }
 
@@ -38,7 +40,7 @@ function gptGenerate(givenTextId, textAreaId, exampleButtonId) {
 
         setTimeout(() => {
             myButton.disabled = false;
-        }, 3000);
+        }, 30000);
     }
 
 };

@@ -25,17 +25,16 @@ app.use(cors());
 
 app.post("/", async (req, res) => {
 
-    const { message } = req.body;
+    const { message, words } = req.body;
     
     const completion = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         messages: [
-            {role: "user", content: `Summarize the following text in Dutch using exactly 20 words: ${message}`},
+            {role: "user", content: `Summarize the following text in Dutch using exactly ${words} words. It is important that is not one word more or less: ${message}`},
         ],
-        temperature: 0.7,
     })
 
-    // console.log(completion.data.choices[0].message)
+    console.log(completion.data.choices[0].message)
 
     res.json({
         completion: completion.data.choices[0].message
