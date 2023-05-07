@@ -1,0 +1,131 @@
+
+<!-- This is the page for the second part of the research. It shows information and a demonstration regarding the implemented gpt model (davinci) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link type="text/css" rel="stylesheet" href="css/style-experiment.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BSc Thesis - Sion Coolwijk</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body>
+        
+        <section id="page1">
+        <div class="content">
+            <h1>Onderzoek naar ChatGPT deel 2: Opdracht</h1>
+
+            <div style="color:red"> Graag onderstaande informatie aandachtig doorlezen!</div>
+
+            <p>Beste participant,</p>
+
+            <p>Zo direct krijgt u een opdracht. Het is hiervoor belangrijk dat u de opdracht maakt <strong>op een laptop.</strong>  </p>
+                
+            <p>U wordt gevraagd om een tekstverwerkingstaak uit te voeren. U krijgt een lap tekst te zien die ongeveer 1000 woorden bevat. Uw opdracht is om een samenvatting te maken van deze tekst met een <strong>exact aantal van 100 woorden.</strong></p>
+        
+            <p>Op de webpagina zal een woordenteller beschikbaar zijn, zodat u kunt bijhouden hoeveel woorden u heeft gebruikt in uw samenvatting.</p>
+        
+            <p>Neem de tijd om de tekst zorgvuldig te lezen en overweeg welke informatie het belangrijkst is om op te nemen in uw samenvatting.</p>
+        
+            <p>Zodra u tevreden bent met uw samenvatting, kunt u deze indienen en doorgaan naar de volgende stap van het onderzoek en worden nog een drietal vragen gesteld omtrent het proces.</p>
+
+            <p>Wat verder van belang is, is het feit dat u geen(!) kans maakt op de cadeaukaart van bol.com ter waarde van 20 euro, als u gebruikt maakt van het geintegreerde GPT model op de website.</p>
+
+            <p> <strong>U zult dus het geïntegreerde GPT-model NIET mogen gebruiken om kans te maken.</strong> </p>
+        
+            <p>Bedankt voor uw deelname en succes met de opdracht!</p>
+
+            <button onclick="goToPage('page2')">Ik heb alle informatie zorgvuldig doorgelezen en wil door.</button>
+        </div>
+        </section>
+
+        <section id="page2" style="display:none">
+            <div class="content">
+                <h1>Demonstratie van het GPT-model</h1>
+                <h2>Voorbeeld</h2>
+
+                <p>Hoewel het gebruik van het geïntegreerde GPT-model niet is toegestaan voor de opdracht, zullen de mogelijkheden van het model toch worden gedemonstreerd. Bekijk hier een simpele demonstratie van het model. Kijk onder andere naaar de nauwkeurigheid van het model bij het samenvatten in het algemeen en bij het eindigen op het exacte aantal woorden.</p>
+
+                <div class="subheading">Input</div>
+                <blockquote id="givenText">Er was eens een klein dorpje, genaamd Vrolijkland, waar de zon altijd scheen en de lucht altijd blauw was. In dit vredige dorpje woonde een meisje genaamd Mieke en haar hondje, Sam. Ze waren de beste vrienden en beleefden samen vele avonturen.<br><br>
+                Op een mooie zomerdag besloten Mieke en Sam om op avontuur te gaan in het betoverde bos aan de rand van Vrolijkland. Het bos stond bekend om zijn magische wezens en verborgen schatten. Gewapend met een rugzak vol lekkernijen en een kompas begonnen ze aan hun tocht.<br><br>
+                Na een tijdje wandelen kwamen ze bij een oude, mysterieuze boom. De boom had een holle stam, waarin een handgeschreven brief lag. De brief vertelde over een verloren magisch kristal dat diep in het bos verborgen lag. Volgens de legende kon dit kristal wensen laten uitkomen.</blockquote>
+
+                <div class="subheading">Instructies</div>
+                <blockquote id='prompt'>Vat het verhaal samen in ongeveer 20 woorden.</blockquote>
+
+                <div class="container">
+                <div class="naastElkaar">
+                <div class="subheading"> Klik mij voor een demonstratie!</div>
+                <button id="exampleButton" onclick="gptGenerate()" style="font-size:25px; margin:1em;"> 
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+                </div>
+                 </div>
+
+                <div class="subheading">Output</div>
+                <div class="input-control">
+                    <textarea id="textInput" style="resize: none;" onkeydown="checkWordLen(this)" placeholder="Zelf tikken of genereren..."></textarea>
+                    <p>Aantal woorden: <span id="wordCount">0</span></p>
+                </div> 
+
+                <button onclick="goToPage('page3')">Ik heb de demonstratie doorgelopen en wil door naar de opdracht.</button>
+            </div>
+        
+        </section>
+
+        <section id="page3" style="display:none">
+            <div class="content">
+                <h1>De opdracht</h1>
+                <h2>De opdracht</h2>
+
+                <p>De opdracht mag nu worden voltooid. Nogmaals: Let op dat u het GPT model <strong>niet</strong> gebruikt, anders maakt u geen kans op een cadeaukaart van bol.com ter waarde van 20 euro.</p>
+
+                <div class="subheading">Input</div>
+                <blockquote id="givenText">Tekst: Lorem Ipsum</blockquote>
+
+                <div class="subheading">Instructies</div>
+                <blockquote id='prompt'>Vat het verhaal samen in <strong>exact</strong> 100 woorden.</blockquote>
+
+                <div class="container">
+                <div class="naastElkaar">
+                <div class="subheading"> Indien je het model toch wil gebruiken: </div>
+                <button id="exampleButton" onclick="gptGenerate()" style="font-size:25px; margin:1em;"> 
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+                </div>
+                 </div>
+
+                <div class="subheading">Output</div>
+                <div class="input-control">
+                    <textarea id="textInput" style="resize: none;" onkeydown="checkWordLen(this)" placeholder="Typ hier uw uitwerking..."></textarea>
+                    <p>Aantal woorden: <span id="wordCount">0</span></p>
+                </div> 
+
+                <button style="background-color:grey" onclick="goToPage('page2')">Ga terug</button>
+                <button onclick="goToPage('page4')">Verstuur uitwerking</button>
+            </div>
+        
+        </section>
+
+        <section id="page4" style="display:none">
+            <p>Hello, World!</p>
+            <button onclick="goToPage('page3')">Terug</button>
+        </section>
+
+
+        <script src="js/button.js"></script>
+        <script src="js/wordCount.js"></script>
+        <script src="js/generation.js"></script>
+        <script src="js/wordMax.js"></script>
+
+    </body>
+
+</html>
+

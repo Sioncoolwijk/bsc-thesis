@@ -1,0 +1,111 @@
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 30px auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    }
+
+.content {
+    text-align: left;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 8px 8px 12px 0px rgba(209,209,209,1);
+    -moz-box-shadow: 8px 8px 12px 0px rgba(209,209,209,1);
+    box-shadow: 8px 8px 12px 0px rgba(209,209,209,1);
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+}
+
+h2 {
+    color: deepskyblue;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+
+button {
+    background-color: rgb(0, 166, 126);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(0, 150, 110);
+}
+
+.input-control textarea {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+  }
+
+blockquote {
+    background-color: lightgrey;
+    border-radius: 4px;
+    color: black;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 24px;
+    margin: auto;
+    padding: 12px 16px;
+}
+
+.subheading {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.naastElkaar {
+    display: flex;
+    align-items: center;
+  }
+
+.container {
+    -webkit-box-shadow: 8px 8px 12px 0px rgba(209,209,209,1);
+    -moz-box-shadow: 8px 8px 12px 0px rgba(209,209,209,1);
+    box-shadow: 8px 8px 12px 0px rgba(209,209,209,1);
+    border: 1px solid grey;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* margin: 30px; */
+    padding: 10px 12px;
+}
+
+#exampleButton:disabled {
+    background-color: grey;
+    color:white;
+    cursor: not-allowed;
+}
