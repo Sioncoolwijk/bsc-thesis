@@ -1,8 +1,8 @@
-function gptGenerate() {
+function gptGenerate(givenTextId, textAreaId, exampleButtonId) {
 
-    const givenText = document.getElementById('givenText');
-    const outputText = document.getElementById('textInput');    
-    const myButton = document.getElementById('exampleButton');
+    const givenText = document.getElementById(givenTextId);
+    const outputText = document.getElementById(textAreaId);    
+    const myButton = document.getElementById(exampleButtonId);
 
     fetch('http://localhost:3000/', {
         method: 'POST',
@@ -32,12 +32,12 @@ function gptGenerate() {
     })
 
     // Disable button with a slight delay
-    setTimeout(disableButton, 1000)
+    disableButton();
     function disableButton() {
         myButton.disabled = true;
 
         setTimeout(() => {
-            exampleButton.disabled = false;
+            myButton.disabled = false;
         }, 3000);
     }
 

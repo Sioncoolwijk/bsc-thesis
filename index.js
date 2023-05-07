@@ -33,10 +33,9 @@ app.post("/", async (req, res) => {
             {role: "user", content: `Summarize the following text in Dutch using exactly 20 words: ${message}`},
         ],
         temperature: 0.7,
-        max_tokens: 40,
     })
 
-    console.log(completion.data.choices[0].message)
+    // console.log(completion.data.choices[0].message)
 
     res.json({
         completion: completion.data.choices[0].message
