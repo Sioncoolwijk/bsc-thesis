@@ -7,4 +7,6 @@ function goToPage(event, pageId) {
         pages[i].style.display = 'none';
     }
     document.getElementById(pageId).style.display = 'block';
+
+    window.scrollTo(0, 0);
 }
