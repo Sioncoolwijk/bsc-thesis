@@ -8,8 +8,8 @@ Included in this repo are all the files necessary for creating a website. This w
 
 #### Front-End
 
-The CSS, JS, HTML, and .htaccess files have been added to the webspace manager of STRATO (the host) to render the website. The website is live as of May 16, 2023, and can be accessed here until July 2023: onderzoeknaarchatgpt.nl.
+The CSS, JS, HTML, and .htaccess files have been added to the webspace manager of [STRATO](https://www.strato.nl/) to host the website. The website is live as of May 16, 2023, and can be accessed here until July 2023: onderzoeknaarchatgpt.nl.
 
 #### Back-End
 
-I've set up a server that deploys our Node.js application via our index.js file. The modules and packages this application depends on are created using the npm init command.
+I've set up a server at [random.com](https://render.com/) that deploys our Node.js application via our index.js file. The modules and packages this application depends on are created using the npm init command.
