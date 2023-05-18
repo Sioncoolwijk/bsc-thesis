@@ -1,185 +1,215 @@
-
-<!-- This is the page for the second part of the research. It shows information and a demonstration regarding the implemented gpt model (davinci) -->
-
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- This is the page for the second part of the research. It shows information and a demonstration regarding the implemented gpt model (davinci) -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link type="text/css" rel="stylesheet" href="css/style-experiment.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BSc Thesis - Sion Coolwijk</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
 
-    <head>
+	<body>
+		<section id="page1">
+			<div class="content">
+				<h1>Onderzoek naar ChatGPT deel 2: Opdracht</h1>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link type="text/css" rel="stylesheet" href="css/style-experiment.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BSc Thesis - Sion Coolwijk</title>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+				<div style="color:red">Graag onderstaande informatie aandachtig doorlezen!</div>
 
-    </head>
+				<p>Beste participant,</p>
 
-    <body>
-        
-        <section id="page1">
-        <div class="content">
-            <h1>Onderzoek naar ChatGPT deel 2: Opdracht</h1>
+				<p>Het is belangrijk dat u de opdracht maakt <strong>op een laptop.</strong></p>
 
-            <div style="color:red"> Graag onderstaande informatie aandachtig doorlezen!</div>
+				<p>U zult <strong>eerst een voorbeeld demonstratie</strong> van de opdracht doorlopen. Hierna volgt de opdracht.</p>
 
-            <p>Beste participant,</p>
+				<p>U wordt gevraagd om een tekstverwerkingstaak uit te voeren.</p>
 
-            <p>Het is belangrijk dat u de opdracht maakt <strong>op een laptop.</strong>  </p>
-                
-            <p>U zult <strong>eerst een voorbeeld demonstratie</strong> van de opdracht doorlopen. Hierna volgt de opdracht. 
-                
-            <p>U wordt gevraagd om een tekstverwerkingstaak uit te voeren.</p>
-        
-            <p>Neem de tijd om de tekst, informatie en opdracht zorgvuldig te lezen</p>
-        
-            <p>Bedankt voor uw deelname en succes met de opdracht!. Er volgt nu een voorbeeld.</p>
+				<p>Neem de tijd om de tekst, informatie en opdracht zorgvuldig te lezen</p>
 
-            <button onclick="goToPage(event, 'page2')">Ik heb alle informatie zorgvuldig gelezen en wil door.</button>
-        </div>
-        </section>
+				<p>Bedankt voor uw deelname en succes met de opdracht!. Er volgt nu een voorbeeld.</p>
 
-        <section id="page2" style="display:none">
-            <div class="content">
-                <h1>Demonstratie van het GPT-model</h1>
-                <h2>Voorbeeld</h2>
+				<button onclick="goToPage(event, 'page2')">Ik heb alle informatie zorgvuldig gelezen en wil door.</button>
+			</div>
+		</section>
 
-                <p>Bekijk hier een simpele demonstratie van het geïntegreerde GPT model. U kunt op de knop klikken om de opdracht te 'laten maken'<br><br>Let onder andere op de nauwkeurigheid van het model bij het samenvatten in het algemeen en bij het eindigen op het aantal woorden.</p>
+		<section id="page2" style="display:none">
+			<div class="content">
+				<h1>Demonstratie van het GPT-model</h1>
+				<h2>Voorbeeld</h2>
 
-                <div class="subheading">Input</div>
-                <blockquote id="givenText">Er was eens een klein dorpje, genaamd Vrolijkland, waar de zon altijd scheen en de lucht altijd blauw was. In dit vredige dorpje woonde een meisje genaamd Mieke en haar hondje, Sam. Ze waren de beste vrienden en beleefden samen vele avonturen.<br><br>
-                Op een mooie zomerdag besloten Mieke en Sam om op avontuur te gaan in het betoverde bos aan de rand van Vrolijkland. Het bos stond bekend om zijn magische wezens en verborgen schatten. Gewapend met een rugzak vol lekkernijen en een kompas begonnen ze aan hun tocht.<br><br>
-                Na een tijdje wandelen kwamen ze bij een oude, mysterieuze boom. De boom had een holle stam, waarin een handgeschreven brief lag. De brief vertelde over een verloren magisch kristal dat diep in het bos verborgen lag. Volgens de legende kon dit kristal wensen laten uitkomen.</blockquote>
+				<p>
+					Bekijk hier een simpele demonstratie van het geïntegreerde GPT model. U kunt op de knop klikken om de opdracht te 'laten maken'<br />
+					<br />
+					Let onder andere op de nauwkeurigheid van het model bij het samenvatten in het algemeen en bij het eindigen op het aantal woorden.
+				</p>
 
-                <div class="subheading">Instructies</div>
-                <blockquote id='prompt'>Vat het verhaal samen in ongeveer 20 woorden.</blockquote>
+				<div class="subheading">Input</div>
+				<blockquote id="givenText">
+					Er was eens een klein dorpje, genaamd Vrolijkland, waar de zon altijd scheen en de lucht altijd blauw was. In dit vredige dorpje woonde een meisje genaamd Mieke en haar hondje, Sam. Ze waren de beste vrienden en
+					beleefden samen vele avonturen.<br />
+					<br />
+					Op een mooie zomerdag besloten Mieke en Sam om op avontuur te gaan in het betoverde bos aan de rand van Vrolijkland. Het bos stond bekend om zijn magische wezens en verborgen schatten. Gewapend met een rugzak vol
+					lekkernijen en een kompas begonnen ze aan hun tocht.<br />
+					<br />
+					Na een tijdje wandelen kwamen ze bij een oude, mysterieuze boom. De boom had een holle stam, waarin een handgeschreven brief lag. De brief vertelde over een verloren magisch kristal dat diep in het bos verborgen lag.
+					Volgens de legende kon dit kristal wensen laten uitkomen.
+				</blockquote>
 
-                <div class="container">
-                <div class="naastElkaar">
-                <div class="subheading"> Klik mij voor een demonstratie!</div>
-                <button id="exampleButton" onclick="gptGenerate('givenText', 'textInput', 'exampleButton', '20')" style="font-size:25px; margin:1em;"> 
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                </button>
-                </div>
-                 </div>
+				<div class="subheading">Instructies</div>
+				<blockquote id="prompt">Vat het verhaal samen in ongeveer 20 woorden.</blockquote>
 
-                <div class="subheading">Output</div>
-                <div class="input-control">
-                    <textarea id="textInput" name="textInput" style="resize: none;" placeholder="Zelf tikken of genereren..."></textarea>
-                    <p>Aantal woorden: <span id="wordCount">0</span></p>
-                </div> 
+				<div class="container">
+					<div class="naastElkaar">
+						<div class="subheading">Klik mij voor een demonstratie!</div>
+						<button id="exampleButton" onclick="gptGenerate('givenText', 'textInput', 'exampleButton', '20')" style="font-size:25px; margin:1em;">
+							<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+								<line x1="22" y1="2" x2="11" y2="13"></line>
+								<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+							</svg>
+						</button>
+					</div>
+				</div>
 
-                <button onclick="goToPage(event, 'page3')">Ik heb de demonstratie doorlopen en wil door naar de opdracht.</button>
-            </div>
-        
-        </section>
+				<div class="subheading">Output</div>
+				<div class="input-control">
+					<textarea id="textInput" name="textInput" style="resize: none;" placeholder="Zelf tikken of genereren..."></textarea>
+					<p>Aantal woorden: <span id="wordCount">0</span></p>
+				</div>
 
-        <section id="page3" style="display:none">
-            <div class="content">
-                <h1>Samenvatten van tekst</h1>
-                <h2>De opdracht</h2>
+				<button onclick="goToPage(event, 'page3')">Ik heb de demonstratie doorlopen en wil door naar de opdracht.</button>
+			</div>
+		</section>
 
-                <p>Schrijf een samenvatting van <strong>exact</strong> 100 woorden over het verhaal van Anna. <br><br>
-                Skim de tekst om de belangrijkste zaken te identificeren, zonder veel tijd te besteden aan het tot in detail lezen van de gehele tekst.
-                <p style="color:red">Er zit een addertje onder het gras: Let op dat u het GPT model <strong>niet</strong> gebruikt, anders maakt u geen kans op een cadeaukaart van bol.com ter waarde van 20 euro.</p></p>
+		<section id="page3" style="display:none">
+			<div class="content">
+				<h1>Samenvatten van tekst</h1>
+				<h2>De opdracht</h2>
 
-                <div class="subheading">Input</div>
-                <blockquote id="givenText2">
-                    Eens, lang geleden, in een klein dorpje aan de rand van een groot bos, woonde een jong meisje genaamd Anna. Anna was een beeldschoon meisje met goudblond haar en helderblauwe ogen. Ze woonde bij haar grootmoeder, aangezien haar ouders waren overleden toen ze nog heel jong was. Haar grootmoeder, een liefdevolle vrouw, had haar sindsdien opgevoed en vertelde haar talloze verhalen over de magische wereld die zich in het bos verscholen hield.<br><br>
+				<p>
+					Schrijf een samenvatting van <strong>exact</strong> 100 woorden over het verhaal van Anna. <br />
+					<br />
+					Skim de tekst om de belangrijkste zaken te identificeren, zonder veel tijd te besteden aan het tot in detail lezen van de gehele tekst.
+				</p>
 
-                    Anna had echter altijd een geheim verlangen gehad om het bos zelf te verkennen en de wondere wereld die haar grootmoeder haar had verteld met eigen ogen te zien. Op een dag, toen haar grootmoeder naar de markt was gegaan om verse groenten te kopen, besloot Anna haar kans te grijpen en het bos in te gaan. Ze nam een mandje met wat brood en kaas mee, zodat ze kon picknicken op een idyllische plek die ze hoopte te vinden.<br><br>
+				<p style="color:red">Er zit een addertje onder het gras: Let op dat u het GPT model <strong>niet</strong> gebruikt, anders maakt u geen kans op een cadeaukaart van bol.com ter waarde van 20 euro.</p>
 
-                    Eenmaal in het bos ontdekte Anna al snel de prachtige geheimen die het te bieden had. Ze kwam een groep feeën tegen die aan het spelen waren in een open plek en keek toe hoe ze dartelden tussen de bloemen en met hun toverstafjes glinsterende sporen achterlieten. Anna besloot zich voorzichtig te verbergen achter een dikke eik en sloeg het schouwspel in stilte gade.<br><br>
+				<div class="subheading">Input</div>
+				<blockquote id="givenText2">
+					Eens, lang geleden, in een klein dorpje aan de rand van een groot bos, woonde een jong meisje genaamd Anna. Anna was een beeldschoon meisje met goudblond haar en helderblauwe ogen. Ze woonde bij haar grootmoeder,
+					aangezien haar ouders waren overleden toen ze nog heel jong was. Haar grootmoeder, een liefdevolle vrouw, had haar sindsdien opgevoed en vertelde haar talloze verhalen over de magische wereld die zich in het bos
+					verscholen hield.<br />
+					<br />
 
-                    Toen ze verder liep, stuitte ze op een glinsterende rivier waar waterwezens hun lied zongen. Ze was betoverd door hun melodie en kon niet anders dan even blijven staan om te luisteren. Na een tijdje merkte Anna echter dat de zon begon onder te gaan en besloot ze dat het tijd was om terug te keren naar het dorp. Ze was bang dat haar grootmoeder ongerust zou zijn en wilde haar niet onnodig laten lijden.<br><br>
+					Anna had echter altijd een geheim verlangen gehad om het bos zelf te verkennen en de wondere wereld die haar grootmoeder haar had verteld met eigen ogen te zien. Op een dag, toen haar grootmoeder naar de markt was gegaan
+					om verse groenten te kopen, besloot Anna haar kans te grijpen en het bos in te gaan. Ze nam een mandje met wat brood en kaas mee, zodat ze kon picknicken op een idyllische plek die ze hoopte te vinden.<br />
+					<br />
 
-                    Terwijl Anna zich haastte om het bos uit te komen, verdwaalde ze. Het werd donkerder en de paden leken met elke stap ingewikkelder te worden. Plotseling hoorde ze een diepe, dreigende stem achter haar en voelde ze een koude rilling over haar rug lopen.<br><br>
+					Eenmaal in het bos ontdekte Anna al snel de prachtige geheimen die het te bieden had. Ze kwam een groep feeën tegen die aan het spelen waren in een open plek en keek toe hoe ze dartelden tussen de bloemen en met hun
+					toverstafjes glinsterende sporen achterlieten. Anna besloot zich voorzichtig te verbergen achter een dikke eik en sloeg het schouwspel in stilte gade.<br />
+					<br />
 
-                    "Jij hebt het evenwicht verstoord", sprak de stem. "Het bos is geen speeltuin voor nieuwsgierige kinderen. Je zult moeten boeten voor je daden." Anna draaide zich om en zag een grote, schaduwrijke figuur voor zich. Ze trilde van angst, maar wist haar moed te verzamelen en vroeg de figuur hoe ze haar fout kon herstellen.<br><br>
+					Toen ze verder liep, stuitte ze op een glinsterende rivier waar waterwezens hun lied zongen. Ze was betoverd door hun melodie en kon niet anders dan even blijven staan om te luisteren. Na een tijdje merkte Anna echter
+					dat de zon begon onder te gaan en besloot ze dat het tijd was om terug te keren naar het dorp. Ze was bang dat haar grootmoeder ongerust zou zijn en wilde haar niet onnodig laten lijden.<br />
+					<br />
 
-                    De schaduw gaf haar een opdracht: ze moest drie taken volbrengen om het evenwicht in het bos te herstellen. De eerste taak was om de gouden bloem te plukken die groeide aan de voet van de Grote Eik in het hart van het bos. De tweede taak was om een magische veer van de zeldzame zilveren feniks te bemachtigen, die zich hoog in de bergen verschanste. De derde en laatste taak was om een druppel water uit de Bron van Eeuwigheid te halen, diep verborgen in een grot aan de andere kant van het bos.<br><br>
+					Terwijl Anna zich haastte om het bos uit te komen, verdwaalde ze. Het werd donkerder en de paden leken met elke stap ingewikkelder te worden. Plotseling hoorde ze een diepe, dreigende stem achter haar en voelde ze een
+					koude rilling over haar rug lopen.<br />
+					<br />
 
-                    Anna, vastberaden om haar fout recht te zetten, ging op weg om de taken te voltooien. De eerste taak was niet al te moeilijk; na enige tijd zoeken vond ze de Grote Eik en plukte ze de gouden bloem. Het kostte haar echter veel tijd en moeite om de berg op te klimmen voor de tweede taak. Uiteindelijk vond ze de zilveren feniks, die haar een magische veer schonk na te hebben gezien dat haar bedoelingen oprecht waren.<br><br>
+					"Jij hebt het evenwicht verstoord", sprak de stem. "Het bos is geen speeltuin voor nieuwsgierige kinderen. Je zult moeten boeten voor je daden." Anna draaide zich om en zag een grote, schaduwrijke figuur voor zich. Ze
+					trilde van angst, maar wist haar moed te verzamelen en vroeg de figuur hoe ze haar fout kon herstellen.<br />
+					<br />
 
-                    De derde taak was de moeilijkste van allemaal. Anna moest urenlang door het donkere, doolhofachtige bos dwalen om de verborgen grot te vinden. Toen ze eindelijk de Bron van Eeuwigheid vond, realiseerde ze zich dat ze geen geschikt recipiënt had om het water in op te vangen. Anna besloot haar handen te gebruiken en het water voorzichtig op te scheppen.<br><br>
+					De schaduw gaf haar een opdracht: ze moest drie taken volbrengen om het evenwicht in het bos te herstellen. De eerste taak was om de gouden bloem te plukken die groeide aan de voet van de Grote Eik in het hart van het
+					bos. De tweede taak was om een magische veer van de zeldzame zilveren feniks te bemachtigen, die zich hoog in de bergen verschanste. De derde en laatste taak was om een druppel water uit de Bron van Eeuwigheid te halen,
+					diep verborgen in een grot aan de andere kant van het bos.<br />
+					<br />
 
-                    Met alle drie de taken voltooid, keerde Anna terug naar de schaduwrijke figuur. Hij keek haar indringend aan en knikte langzaam. "Je hebt het evenwicht hersteld en hebt bewezen dat je respect hebt voor de magische wereld", zei hij plechtig. Als beloning schonk hij Anna de gave om altijd met de magische wezens van het bos te kunnen communiceren.<br><br>
+					Anna, vastberaden om haar fout recht te zetten, ging op weg om de taken te voltooien. De eerste taak was niet al te moeilijk; na enige tijd zoeken vond ze de Grote Eik en plukte ze de gouden bloem. Het kostte haar echter
+					veel tijd en moeite om de berg op te klimmen voor de tweede taak. Uiteindelijk vond ze de zilveren feniks, die haar een magische veer schonk na te hebben gezien dat haar bedoelingen oprecht waren.<br />
+					<br />
 
-                    Toen Anna terugkeerde naar het dorp, vond ze haar grootmoeder ongerust op haar wachtend. Ze omhelsden elkaar innig en Anna vertelde haar grootmoeder over haar avonturen en de lessen die ze had geleerd. Haar grootmoeder luisterde aandachtig en knikte goedkeurend. Ze was trots op haar kleindochter en wist dat ze klaar was om de verantwoordelijkheid te dragen die bij haar nieuwe gave hoorde.<br><br>
+					De derde taak was de moeilijkste van allemaal. Anna moest urenlang door het donkere, doolhofachtige bos dwalen om de verborgen grot te vinden. Toen ze eindelijk de Bron van Eeuwigheid vond, realiseerde ze zich dat ze
+					geen geschikt recipiënt had om het water in op te vangen. Anna besloot haar handen te gebruiken en het water voorzichtig op te scheppen.<br />
+					<br />
 
-                    Vanaf die dag leefde Anna als een brug tussen het dorp en het magische bos, en zorgde ze voor het behoud van het evenwicht tussen beide werelden. Ze werd een gerespecteerde en geliefde figuur in het dorp en haar naam werd door de generaties heen doorgegeven als een symbool van wijsheid, moed en respect voor de magie die de wereld in evenwicht hield.
-                </blockquote>
+					Met alle drie de taken voltooid, keerde Anna terug naar de schaduwrijke figuur. Hij keek haar indringend aan en knikte langzaam. "Je hebt het evenwicht hersteld en hebt bewezen dat je respect hebt voor de magische
+					wereld", zei hij plechtig. Als beloning schonk hij Anna de gave om altijd met de magische wezens van het bos te kunnen communiceren.<br />
+					<br />
 
-                <div class="subheading">Instructies</div>
-                <blockquote id='prompt2'>Vat het verhaal samen in ongeveer 100 woorden.</blockquote>
+					Toen Anna terugkeerde naar het dorp, vond ze haar grootmoeder ongerust op haar wachtend. Ze omhelsden elkaar innig en Anna vertelde haar grootmoeder over haar avonturen en de lessen die ze had geleerd. Haar grootmoeder
+					luisterde aandachtig en knikte goedkeurend. Ze was trots op haar kleindochter en wist dat ze klaar was om de verantwoordelijkheid te dragen die bij haar nieuwe gave hoorde.<br />
+					<br />
 
-                <div class="container">
-                <div class="naastElkaar">
-                    <p>Let op dat u het GPT model <strong>niet</strong> gebruikt door op de knop te klikken, anders maakt u geen kans op een cadeaukaart van bol.com ter waarde van 20 euro.</p>
-                <div class="subheading"> Indien je het model toch wil gebruiken: </div>
-                <button id="exampleButton2" onclick="gptGenerate('givenText2', 'textInput2', 'exampleButton2', '100')" style="font-size:25px; margin:1em"> 
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                </button>
-                </div>
-                 </div>
+					Vanaf die dag leefde Anna als een brug tussen het dorp en het magische bos, en zorgde ze voor het behoud van het evenwicht tussen beide werelden. Ze werd een gerespecteerde en geliefde figuur in het dorp en haar naam
+					werd door de generaties heen doorgegeven als een symbool van wijsheid, moed en respect voor de magie die de wereld in evenwicht hield.
+				</blockquote>
 
-                <div class="subheading">Output</div>
-                <div class="input-control">
-                    <textarea id="textInput2" name="textInput2" style="resize: none;" placeholder="Typ hier uw uitwerking..."></textarea>
-                    <p>Aantal woorden: <span id="wordCount2">0</span></p>
-                </div> 
+				<div class="subheading">Instructies</div>
+				<blockquote id="prompt2">Vat het verhaal samen in ongeveer 100 woorden.</blockquote>
 
-                <button style="background-color:grey" onclick="goToPage('page2')">Ga terug</button>
-                <button onclick="goToPage(event, 'page4')">Verstuur uitwerking</button>
-            </div>
-        
-        </section>
+				<div class="container">
+					<div class="naastElkaar">
+						<p>Let op dat u het GPT model <strong>niet</strong> gebruikt door op de knop te klikken, anders maakt u geen kans op een cadeaukaart van bol.com ter waarde van 20 euro.</p>
+						<div class="subheading">Indien je het model toch wil gebruiken:</div>
+						<button id="exampleButton2" onclick="gptGenerate('givenText2', 'textInput2', 'exampleButton2', '100')" style="font-size:25px; margin:1em">
+							<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 -3 26 26" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+								<line x1="22" y1="2" x2="11" y2="13"></line>
+								<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+							</svg>
+						</button>
+					</div>
+				</div>
 
-        <section id="page4" style="display:none">
-            <div class="content">
-            <h1>Hartelijk dank voor het meedoen aan het onderzoek!</h1>
+				<div class="subheading">Output</div>
+				<div class="input-control">
+					<textarea id="textInput2" name="textInput2" style="resize: none;" placeholder="Typ hier uw uitwerking..."></textarea>
+					<p>Aantal woorden: <span id="wordCount2">0</span></p>
+				</div>
 
-            <h2>Je maakt kans op een bol.com cadeaukaart ter waarde van 20 euro</h2>
+				<button style="background-color:grey" onclick="goToPage('page2')">Ga terug</button>
+				<button onclick="goToPage(event, 'page4')">Verstuur uitwerking</button>
+			</div>
+		</section>
 
-            <p>Als laatste vraag wil ik je vragen of je gebruik hebt gemaakt van het GPT model, ondanks aangegeven dat dit niet mocht. </p>
-            
-            <form class="full-form">
-            <div class="form-no-button"> 
-                <label for="gebruiktVraag">Heb je het GPT-model gebruikt bij het maken van de opdracht?</label>
-                
-            <div class="form-container">
-                <input type="radio" id="Ja" name="answer" value="Ja">
-                <label class="radio-label" for="Ja">Ja</label><br>
-                
-                <input type="radio" id="Nee" name="answer" value="Nee">
-                <label class="radio-label" for="Nee">Nee</label><br>
-            </div>
-            </div>
-                <button onclick="goToPage(event, 'page5')" type="submit">Verstuur</button>
+		<section id="page4" style="display:none">
+			<div class="content">
+				<h1>Hartelijk dank voor het meedoen aan het onderzoek!</h1>
 
-            </form>
+				<h2>Je maakt kans op een bol.com cadeaukaart ter waarde van 20 euro</h2>
 
+				<p>Als laatste vraag wil ik je vragen of je gebruik hebt gemaakt van het GPT model, ondanks aangegeven dat dit niet mocht.</p>
 
-             </div>
-        </section>
+				<form class="full-form">
+					<div class="form-no-button">
+						<label for="gebruiktVraag">Heb je het GPT-model gebruikt bij het maken van de opdracht?</label>
 
-        <section id="page5" style="display:none">
-            <div class="content">
-            <h1>Einde van de survey. Bedankt!</h1>
-            <h2>De winnaar van de cadeaukaart zal binnen 4 weken worden benaderd.</h2>
-            <p>Deze pagina kan afgesloten worden.</p>
-            </div>
-        </section>
+						<div class="form-container">
+							<input type="radio" id="Ja" name="answer" value="Ja" />
+							<label class="radio-label" for="Ja">Ja</label><br />
 
+							<input type="radio" id="Nee" name="answer" value="Nee" />
+							<label class="radio-label" for="Nee">Nee</label><br />
+						</div>
+					</div>
+					<button onclick="goToPage(event, 'page5')" type="submit">Verstuur</button>
+				</form>
+			</div>
+		</section>
 
+		<section id="page5" style="display:none">
+			<div class="content">
+				<h1>Einde van de survey. Bedankt!</h1>
+				<h2>De winnaar van de cadeaukaart zal binnen 4 weken worden benaderd.</h2>
+				<p>Deze pagina kan afgesloten worden.</p>
+			</div>
+		</section>
 
-        <script src="js/button.js"></script>
-        <script src="js/wordCount.js"></script>
-        <script src="js/wordCount2.js"></script>
-        <script src="js/generation.js"></script>
-        <script src="js/wordMax.js"></script>
-
-    </body>
-
+		<script src="js/button.js"></script>
+		<script src="js/wordCount.js"></script>
+		<script src="js/wordCount2.js"></script>
+		<script src="js/generation.js"></script>
+		<script src="js/wordMax.js"></script>
+	</body>
 </html>
-
