@@ -100,7 +100,6 @@ blockquote {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    /* margin: 30px; */
     padding: 10px 12px;
 }
 
@@ -114,4 +113,8 @@ blockquote {
     background-color: grey;
     color:white;
     cursor: not-allowed;
+}
+
+#exampleButton2 {
+    background-color: red;
 }
