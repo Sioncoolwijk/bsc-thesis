@@ -142,11 +142,24 @@
             <h2>Je maakt kans op een bol.com cadeaukaart ter waarde van 20 euro</h2>
 
             <p>Als laatste vraag wil ik je vragen of je gebruik hebt gemaakt van het GPT model, ondanks aangegeven dat dit niet mocht. </p>
- 
-            <label>
-                <p>Heb je het GPT-model gebruikt bij het maken van de opdracht?</p>
+            
+            <form class="full-form">
+            <div class="form-no-button"> 
+                <label for="gebruiktVraag">Heb je het GPT-model gebruikt bij het maken van de opdracht?</label>
+                
+            <div class="form-container">
+                <input type="radio" id="Ja" name="answer" value="Ja">
+                <label class="radio-label" for="Ja">Ja</label><br>
+                
+                <input type="radio" id="Nee" name="answer" value="Nee">
+                <label class="radio-label" for="Nee">Nee</label><br>
+            </div>
+            </div>
+                <button type="submit">Verstuur</button>
 
-            <button type="submit"> Verstuur </button>
+            </form>
+
+
              </div>
         </section>
 
