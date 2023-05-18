@@ -4,7 +4,7 @@
 #### General information
 This repository contains the code for my Bachelor's Thesis in Information Sciences at the University of Amsterdam. It was authored by S.A. Coolwijk.
 
-Included in this repo are all the files necessary for creating a website. This website initially serves as a survey via an embedded Google Forms link. Additionally, it facilitates an experiment/assignment utiziling an OpenAI API in which students can participate.
+Included in this repository are all the files necessary for creating a website. This website initially serves as a survey via an embedded Google Forms link. Additionally, it facilitates an experiment/assignment utiziling an OpenAI API in which students can participate.
 
 #### Front-End
 
