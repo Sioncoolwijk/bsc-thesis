@@ -1,4 +1,3 @@
-
 /* This script makes it possible to hop to another section within the same page */
 
 function goToPage(event, pageId) {

@@ -1,4 +1,3 @@
-
 /* This script keeps track of the amount of words in the text area and displays it in a counter*/
 
 function wordCounter(str) {

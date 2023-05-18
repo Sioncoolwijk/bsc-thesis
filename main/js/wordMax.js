@@ -1,4 +1,3 @@
-
 /* 
 The idea for this code is to put constraints (amount of words and characters per word) on the input data from the participant.
 Source for a part of this code: https://stackoverflow.com/questions/25148479/how-can-i-limit-words-not-characters-in-textarea-html
