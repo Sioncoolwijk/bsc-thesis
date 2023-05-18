@@ -117,7 +117,7 @@ blockquote {
     margin-right: 30px;
     padding: 10px 8px;
 }
-/* Increase the size of the radio buttons */
+
 input[type="radio"] {
     transform: scale(1.5);
     margin-right: 10px;
