@@ -35,7 +35,7 @@
         
             <p>Bedankt voor uw deelname en succes met de opdracht!. Er volgt nu een voorbeeld.</p>
 
-            <button onclick="goToPage('page2')">Ik heb alle informatie zorgvuldig gelezen en wil door.</button>
+            <button onclick="goToPage(event, 'page2')">Ik heb alle informatie zorgvuldig gelezen en wil door.</button>
         </div>
         </section>
 
@@ -69,7 +69,7 @@
                     <p>Aantal woorden: <span id="wordCount">0</span></p>
                 </div> 
 
-                <button onclick="goToPage('page3')">Ik heb de demonstratie doorlopen en wil door naar de opdracht.</button>
+                <button onclick="goToPage(event, 'page3')">Ik heb de demonstratie doorlopen en wil door naar de opdracht.</button>
             </div>
         
         </section>
@@ -130,7 +130,7 @@
                 </div> 
 
                 <button style="background-color:grey" onclick="goToPage('page2')">Ga terug</button>
-                <button onclick="goToPage('page4')">Verstuur uitwerking</button>
+                <button onclick="goToPage(event, 'page4')">Verstuur uitwerking</button>
             </div>
         
         </section>
@@ -155,13 +155,22 @@
                 <label class="radio-label" for="Nee">Nee</label><br>
             </div>
             </div>
-                <button type="submit">Verstuur</button>
+                <button onclick="goToPage(event, 'page5')" type="submit">Verstuur</button>
 
             </form>
 
 
              </div>
         </section>
+
+        <section id="page5" style="display:none">
+            <div class="content">
+            <h1>Einde van de survey. Bedankt!</h1>
+            <h2>De winnaar van de cadeaukaart zal binnen 4 weken worden benaderd.</h2>
+            <p>Deze pagina kan afgesloten worden.</p>
+            </div>
+        </section>
+
 
 
         <script src="js/button.js"></script>
