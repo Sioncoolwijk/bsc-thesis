@@ -130,3 +130,11 @@ input[type="radio"] {
     margin-bottom: 22px;
     padding: 24px;
 }
+
+
+.text-under-button {
+    display:none;
+    color: grey;
+    justify-content: center;
+    font-size: small;
+}

@@ -1,8 +1,9 @@
-function gptGenerate(givenTextId, textAreaId, exampleButtonId, words) {
+function gptGenerate(givenTextId, textAreaId, exampleButtonId, words, textUnderButton) {
 
     const givenText = document.getElementById(givenTextId);
     const outputText = document.getElementById(textAreaId);    
     const myButton = document.getElementById(exampleButtonId);
+    const loadingText = document.getElementById(textUnderButton);
 
     fetch('http://localhost:3000/', {
         method: 'POST',
@@ -41,6 +42,16 @@ function gptGenerate(givenTextId, textAreaId, exampleButtonId, words) {
         setTimeout(() => {
             myButton.disabled = false;
         }, 30000);
+    }
+
+    // Show loading text
+    showLoadingText();
+    function showLoadingText() {
+        loadingText.style.display = 'flex';
+
+        setTimeout(() => {
+            loadingText.style.display = 'none';
+        }, 5000);
     }
 
 };
