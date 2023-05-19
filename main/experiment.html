@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BSc Thesis - Sion Coolwijk</title>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<base target="_top">
 	</head>
 
 	<body>
@@ -168,7 +169,7 @@
 					<p>Aantal woorden: <span id="wordCount2">0</span></p>
 				</div>
 
-				<button style="background-color:grey" onclick="goToPage('page2')">Ga terug</button>
+				<button style="background-color:grey" onclick="goToPage(event, 'page2')">Ga terug</button>
 				<button onclick="goToPage(event, 'page4')">Verstuur uitwerking</button>
 			</div>
 		</section>
