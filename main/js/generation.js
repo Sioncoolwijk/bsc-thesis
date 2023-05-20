@@ -1,9 +1,13 @@
+const e = require("cors");
+
 function gptGenerate(givenTextId, textAreaId, exampleButtonId, words, textUnderButton) {
 
     const givenText = document.getElementById(givenTextId);
     const outputText = document.getElementById(textAreaId);    
     const myButton = document.getElementById(exampleButtonId);
     const loadingText = document.getElementById(textUnderButton);
+
+    document.getElementById('clicked-gpt').value = 'Yes';
 
     fetch('http://localhost:3000/', {
         method: 'POST',
