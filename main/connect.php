@@ -12,5 +12,6 @@
         $conn->close();
         header('Location: thankyou');
         exit();
+        
     }
 ?>
