@@ -6,6 +6,8 @@ This repository contains the code for my Bachelor's Thesis in Information Scienc
 
 Included in this repository are all the files necessary for creating a custom website. This website initially serves as a survey via an embedded Google Forms link. Additionally, it facilitates an experiment/assignment utiziling an OpenAI API in which students can participate.
 
+Note that I have not included the .env file where the API key has been stored for security reasons.
+
 #### Front-End
 
 The CSS, JS, HTML, and .htaccess files have been added to the webspace manager of [STRATO](https://www.strato.nl/) to host the website. The website is live as of May 16, 2023, and can be accessed here until July 2023: onderzoeknaarchatgpt.nl.
