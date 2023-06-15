@@ -14,6 +14,6 @@ The CSS, JS, HTML, and .htaccess files have been added to the webspace manager o
 
 #### Back-End
 
-In this repository, a local host in used in the fetch command. {Personally, I've set up a server at [render.com](https://render.com/) that deploys our Node.js application via our index.js file. The modules and packages this application depends on are created using the ```npm init``` command.
+In this repository, a local host in used in the fetch command. Personally, I've set up a server at [render.com](https://render.com/) that deploys our Node.js application via our index.js file. The modules and packages this application depends on are created using the ```npm init``` command.
 
-Additionally, PHP is used to connect to save the user's input in the form and the click behavior on the GPT button. This is stored in the MySQL database that is included on the host. The credentials of this db have been excluded in the code.
+Additionally, PHP is used to connect to save the user's input in the form and the click behavior on the GPT button. This is stored in the MySQL database that is included on the host. The credentials of this db have been excluded in the code (.env environment variable).
