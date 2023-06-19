@@ -6,7 +6,7 @@ This repository contains the code for my Bachelor's Thesis in Information Scienc
 
 Included in this repository are all the files necessary for creating a custom website. This website initially serves as a survey via an embedded Google Forms link. Additionally, it facilitates an experiment/assignment utiziling an OpenAI API in which students can participate.
 
-Note that I have not included the .env file where the API key has been stored as environment variable for security reasons. 
+Note that I have not included the .env file, where the API key has been stored as environment variable, for security reasons. 
 
 #### Front-End
 
