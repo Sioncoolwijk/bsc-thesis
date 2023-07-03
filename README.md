@@ -10,7 +10,7 @@ Note that I have not included the .env file, where the API key has been stored a
 
 #### Front-End
 
-The CSS, JS, HTML, and .htaccess files have been added to the webspace manager of [STRATO](https://www.strato.nl/) to host the website. The website is live as of May 16, 2023, and can be accessed until July 2023 here: [www.onderzoeknaarchatgpt.nl](onderzoeknaarchatgpt.nl).
+The CSS, JS, HTML, and .htaccess files have been added to the webspace manager of [STRATO](https://www.strato.nl/) to host the website. The website is live as of May 16, 2023, and can be accessed until July 2023 here: [www.onderzoeknaarchatgpt.nl](https://www.onderzoeknaarchatgpt.nl).
 
 #### Back-End
 
